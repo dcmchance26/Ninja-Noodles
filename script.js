@@ -15,7 +15,7 @@ const gameScreen = document.getElementById("gameScreen");
 
 const player = document.getElementById("player");
 
-let playerX = 50;
+let playerX = 30;
 
 startBtn.addEventListener("click", () => {
     titleScreen.style.display = "none";
@@ -51,7 +51,7 @@ const maxX = arena.clientWidth - player.offsetWidth;
 
 const enemy = document.getElementById("enemy");
 const enemyHealthBar = document.getElementById("enemyHealth");
-let enemyX = window.innerWidth - 150;
+let enemyX = window.innerWidth - 90;
 
 enemy.style.left = enemyX + "px";
 enemy.style.right = "auto";

@@ -81,3 +81,15 @@ document.getElementById("jumpBtn").addEventListener("click", () => {
     }, 500);
 
 });
+setInterval(() => {
+
+    const distance = enemyX - playerX;
+
+    if (distance > 90) {
+
+        enemyX -= 4;
+
+        enemy.style.left = enemyX + "px";
+    }
+
+}, 100);

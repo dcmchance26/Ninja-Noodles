@@ -83,13 +83,16 @@ document.getElementById("jumpBtn").addEventListener("click", () => {
 });
 setInterval(() => {
 
-    const distance = enemyX - playerX;
-
-    if (distance > 90) {
+    if (enemyX > playerX + 80) {
 
         enemyX -= 4;
 
-        enemy.style.left = enemyX + "px";
+    } else if (enemyX < playerX - 80) {
+
+        enemyX += 4;
+
     }
+
+    enemy.style.left = enemyX + "px";
 
 }, 100);

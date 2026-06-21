@@ -107,11 +107,11 @@ document.getElementById("jumpBtn").addEventListener("click", () => {
 });
 setInterval(() => {
 
-    if (enemyX > playerX + 70) {
+    if (enemyX > playerX + 60) {
 
         enemyX -= 4;
 
-    } else if (enemyX < playerX - 70) {
+    } else if (enemyX < playerX - 60) {
 
         enemyX += 4;
 

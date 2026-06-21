@@ -270,4 +270,4 @@ function startRoundIntro() {
     }, 1500);
 
 }
-
+console.log("Script Loaded");

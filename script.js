@@ -190,6 +190,23 @@ if (!fightActive) return;
     }
 
 }, 100);
+function resetRound() {
+
+    playerHealth = 100;
+    enemyHealth = 100;
+
+    playerHealthBar.style.width = "100%";
+    enemyHealthBar.style.width = "100%";
+
+    playerX = 20;
+    player.style.left = playerX + "px";
+
+    enemyX = window.innerWidth - 90;
+    enemy.style.left = enemyX + "px";
+
+    gameOver = false;
+
+}
 function startRoundIntro() {
 
     fightActive = false;

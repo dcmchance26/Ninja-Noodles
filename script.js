@@ -71,7 +71,7 @@ document.getElementById("attackBtn").addEventListener("click", () => {
 
     if (distance < 70) {
 
-        enemyHealth -= 10;
+        enemyHealth -= 0;
         enemy.style.opacity = "0.4";
 
 setTimeout(() => {
@@ -141,7 +141,7 @@ setInterval(() => {
         }, 100);
 
         // Damage player
-        playerHealth -= 10;
+        playerHealth -= 0;
 
         if (playerHealth < 0) {
             playerHealth = 0;

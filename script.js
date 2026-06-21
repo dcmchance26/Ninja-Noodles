@@ -81,14 +81,21 @@ if (!fightActive) return;
 
     if (distance < 70) {
 
-        enemyHealth -= 10;
-        enemy.style.opacity = "0.4";
+    enemyHealth -= 10;
 
-setTimeout(() => {
-    enemy.style.opacity = "1";
-}, 100);
+    if (enemyHealth < 0) {
+        enemyHealth = 0;
+    }
 
-if (enemyHealth < 0) {
+    enemyHealthBar.style.width = enemyHealth + "%";
+
+    enemy.style.opacity = "0.4";
+
+    setTimeout(() => {
+        enemy.style.opacity = "1";
+    }, 100);
+
+    if (enemyHealth <= 0) {
     enemyHealth = 0;
 }
 

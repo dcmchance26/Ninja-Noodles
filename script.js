@@ -31,7 +31,7 @@ document.getElementById("rightBtn").addEventListener("click", () => {
     playerX += 20;
 
     const arena = document.getElementById("arena");
-const maxX = arena.clientWidth - 80;
+const maxX = arena.clientWidth - player.offsetWidth;
 
     if (playerX > maxX) {
         playerX = maxX;

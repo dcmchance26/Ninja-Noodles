@@ -97,6 +97,16 @@ if (enemyHealth <= 0) {
     messageBox.textContent =
         "PLAYER WINS ROUND " + currentRound;
 
+    setTimeout(() => {
+
+        currentRound++;
+
+        resetRound();
+
+        startRoundIntro();
+
+    }, 2000);
+
 }
 
     }
@@ -184,6 +194,16 @@ if (!fightActive) return;
 
     messageBox.textContent =
         "ENEMY WINS ROUND " + currentRound;
+
+    setTimeout(() => {
+
+        currentRound++;
+
+        resetRound();
+
+        startRoundIntro();
+
+    }, 2000);
 
 }
 

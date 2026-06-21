@@ -180,11 +180,13 @@ button{
     background:#ffae00;
 
     color:black;
+
+    margin-bottom:120px;
 }
 
 #versionText{
 
-    margin-top:25px;
+    margin-top:5px;
 
     color:#777;
 

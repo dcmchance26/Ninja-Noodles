@@ -1,3 +1,4 @@
+let gameOver = false;
 const playerHealthBar = document.getElementById("playerHealth");
 
 let playerHealth = 100;
@@ -152,9 +153,13 @@ setInterval(() => {
         playerHealthBar.style.width = playerHealth + "%";
 
         // Death check
-        if (playerHealth === 0) {
-            alert("You Lost!");
-        }
+        if (playerHealth === 0 && !gameOver) {
+
+    gameOver = true;
+
+    alert("You Lost!");
+
+}  
 
         // Cooldown
         setTimeout(() => {

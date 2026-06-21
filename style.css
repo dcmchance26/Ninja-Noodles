@@ -9,22 +9,19 @@ body{
     font-family:Arial, sans-serif;
     overflow:hidden;
 }
-
 #titleScreen{
     height:100vh;
+
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:flex-end;
     align-items:center;
-    text-align:center;
 
-    background:
-    linear-gradient(
-        to bottom,
-        #111,
-        #1a1a1a,
-        #111
-    );
+    background-image:url("images/AC2A30D0-2110-407B-826B-944945AC50F5");
+    background-size:cover;
+    background-position:center;
+
+    position:relative;
 
     color:white;
 }
@@ -47,7 +44,24 @@ body{
     background:#ffae00;
     color:black;
 }
+#titleScreen::before{
+    content:"";
 
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+    background:rgba(0,0,0,.35);
+
+    z-index:1;
+}
+#titleScreen > *{
+    position:relative;
+    z-index:2;
+}
 #arena{
     position:relative;
     width:100%;

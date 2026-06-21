@@ -94,12 +94,16 @@ setTimeout(() => {
 
         enemyHealthBar.style.width = enemyHealth + "%";
 
-        if (enemyHealth <= 0) 
-            setTimeout(() => {
-    alert("Round Win!");
-}, 100);
-    }
-});
+       if (enemyHealth <= 0) {
+
+    fightActive = false;
+
+    playerRoundsWon++;
+
+    messageBox.textContent =
+        "PLAYER WINS ROUND " + currentRound;
+
+}
 let jumping = false;
 
 document.getElementById("jumpBtn").addEventListener("click", () => {
@@ -175,12 +179,14 @@ if (!fightActive) return;
 
     gameOver = true;
 
-    setTimeout(() => {
-    alert("You Lost!");
-}, 100);
-            
+    fightActive = false;
 
-}  
+    enemyRoundsWon++;
+
+    messageBox.textContent =
+        "ENEMY WINS ROUND " + currentRound;
+
+}
 
         // Cooldown
         setTimeout(() => {

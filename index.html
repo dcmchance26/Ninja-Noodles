@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Noodles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div id="titleScreen">
+        <h1>NINJA NOODLES</h1>
+        <p>Fight. Upgrade. Become Legendary.</p>
+        <button id="startBtn">Start Game</button>
+    </div>
+
+    <div id="gameScreen" style="display:none;">
+
+        <div id="hud">
+            <div class="health-container">
+                <div id="playerHealth" class="health-bar"></div>
+            </div>
+
+            <div class="health-container">
+                <div id="enemyHealth" class="health-bar enemy"></div>
+            </div>
+        </div>
+
+        <div id="arena">
+            <div id="player" class="fighter"></div>
+            <div id="enemy" class="fighter enemyFighter"></div>
+        </div>
+
+        <div id="controls">
+
+            <div class="leftControls">
+                <button id="leftBtn">◀</button>
+                <button id="rightBtn">▶</button>
+            </div>
+
+            <div class="rightControls">
+                <button id="jumpBtn">▲</button>
+                <button id="attackBtn">👊</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

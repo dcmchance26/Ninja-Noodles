@@ -84,9 +84,10 @@ setTimeout(() => {
 
         enemyHealthBar.style.width = enemyHealth + "%";
 
-        if (enemyHealth === 0) {
-            alert("Round Win!");
-        }
+        if (enemyHealth <= 0) 
+            setTimeout(() => {
+    alert("Round Win!");
+}, 100);
     }
 });
 let jumping = false;
@@ -158,11 +159,13 @@ setInterval(() => {
         playerHealthBar.style.width = playerHealth + "%";
 
         // Death check
-        if (playerHealth === 0 && !gameOver) {
+        if (playerHealth <= 0 && !gameOver) {
 
     gameOver = true;
 
+    setTimeout(() => {
     alert("You Lost!");
+}, 100);
             
 
 }  

@@ -104,6 +104,7 @@ setTimeout(() => {
         "PLAYER WINS ROUND " + currentRound;
 
 }
+    });
 let jumping = false;
 
 document.getElementById("jumpBtn").addEventListener("click", () => {

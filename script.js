@@ -3,7 +3,7 @@ let currentRound = 1;
 
 let playerRoundsWon = 0;
 let enemyRoundsWon = 0;
-
+let fightActive = false;
 const messageBox = document.getElementById("messageBox");
 const playerHealthBar = document.getElementById("playerHealth");
 

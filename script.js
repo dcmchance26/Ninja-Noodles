@@ -28,3 +28,24 @@ document.getElementById("attackBtn").addEventListener("click", () => {
         player.style.transform = "scale(1)";
     }, 100);
 });
+let jumping = false;
+
+document.getElementById("jumpBtn").addEventListener("click", () => {
+
+    if (jumping) return;
+
+    jumping = true;
+
+    player.style.transition = "bottom 0.25s";
+
+    player.style.bottom = "150px";
+
+    setTimeout(() => {
+        player.style.bottom = "20px";
+    }, 250);
+
+    setTimeout(() => {
+        jumping = false;
+    }, 500);
+
+});

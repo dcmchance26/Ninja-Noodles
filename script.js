@@ -88,7 +88,11 @@ setTimeout(() => {
     enemy.style.opacity = "1";
 }, 100);
 
-if (enemyHealth <= 0) {
+if (enemyHealth < 0) {
+    enemyHealth = 0;
+}
+
+enemyHealthBar.style.width = enemyHealth + "%";
 
     fightActive = false;
 

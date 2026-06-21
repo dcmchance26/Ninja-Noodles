@@ -23,7 +23,7 @@ startBtn.addEventListener("click", () => {
 });
 
 document.getElementById("leftBtn").addEventListener("click", () => {
-
+if (!fightActive) return;
     playerX -= 20;
 
     if (playerX < 0) {
@@ -35,7 +35,7 @@ document.getElementById("leftBtn").addEventListener("click", () => {
 });
 
 document.getElementById("rightBtn").addEventListener("click", () => {
-
+if (!fightActive) return;
     playerX += 20;
 
     const arena = document.getElementById("arena");
@@ -63,7 +63,7 @@ setTimeout(() => {
 }, 100);
 
 document.getElementById("attackBtn").addEventListener("click", () => {
-
+if (!fightActive) return;
     player.style.transform = "scale(1.2)";
 
     setTimeout(() => {
@@ -99,7 +99,7 @@ setTimeout(() => {
 let jumping = false;
 
 document.getElementById("jumpBtn").addEventListener("click", () => {
-
+if (!fightActive) return;
     if (jumping) return;
 
     jumping = true;
@@ -133,7 +133,7 @@ setInterval(() => {
 
 }, 100);
 setInterval(() => {
-
+if (!fightActive) return;
     const distance = Math.abs(enemyX - playerX);
 
     if (distance < 70 && enemyCanAttack) {
@@ -184,3 +184,31 @@ setInterval(() => {
     }
 
 }, 100);
+function startRoundIntro() {
+
+    fightActive = false;
+
+    messageBox.textContent = "ROUND " + currentRound;
+
+    setTimeout(() => {
+
+        messageBox.textContent = "READY";
+
+        setTimeout(() => {
+
+            messageBox.textContent = "BOIL!";
+
+            setTimeout(() => {
+
+                messageBox.textContent = "";
+
+                fightActive = true;
+
+            }, 1000);
+
+        }, 1000);
+
+    }, 1000);
+
+}
+startRoundIntro();

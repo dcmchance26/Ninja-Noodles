@@ -1,3 +1,6 @@
+const playerHealthBar = document.getElementById("playerHealth");
+
+let playerHealth = 100;
 const startBtn = document.getElementById("startBtn");
 const titleScreen = document.getElementById("titleScreen");
 const gameScreen = document.getElementById("gameScreen");

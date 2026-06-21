@@ -1,6 +1,7 @@
 const playerHealthBar = document.getElementById("playerHealth");
 
 let playerHealth = 100;
+let enemyCanAttack = true;
 const startBtn = document.getElementById("startBtn");
 const titleScreen = document.getElementById("titleScreen");
 const gameScreen = document.getElementById("gameScreen");
@@ -111,5 +112,50 @@ setInterval(() => {
     }
 
     enemy.style.left = enemyX + "px";
+
+}, 100);
+setInterval(() => {
+
+    const distance = Math.abs(enemyX - playerX);
+
+    if (distance < 90 && enemyCanAttack) {
+
+        enemyCanAttack = false;
+
+        // Enemy attack animation
+        enemy.style.transform = "scale(1.2)";
+
+        setTimeout(() => {
+            enemy.style.transform = "scale(1)";
+        }, 100);
+
+        // Damage player
+        playerHealth -= 10;
+
+        if (playerHealth < 0) {
+            playerHealth = 0;
+        }
+
+        // Flash player when hit
+        player.style.opacity = "0.4";
+
+        setTimeout(() => {
+            player.style.opacity = "1";
+        }, 100);
+
+        // Update health bar
+        playerHealthBar.style.width = playerHealth + "%";
+
+        // Death check
+        if (playerHealth === 0) {
+            alert("You Lost!");
+        }
+
+        // Cooldown
+        setTimeout(() => {
+            enemyCanAttack = true;
+        }, 1500);
+
+    }
 
 }, 100);

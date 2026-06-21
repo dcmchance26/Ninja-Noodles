@@ -21,12 +21,38 @@ document.getElementById("rightBtn").addEventListener("click", () => {
     player.style.left = playerX + "px";
 });
 
+const enemy = document.getElementById("enemy");
+const enemyHealthBar = document.getElementById("enemyHealth");
+
+let enemyHealth = 100;
+
 document.getElementById("attackBtn").addEventListener("click", () => {
+
     player.style.transform = "scale(1.2)";
 
     setTimeout(() => {
         player.style.transform = "scale(1)";
     }, 100);
+
+    const playerRect = player.getBoundingClientRect();
+    const enemyRect = enemy.getBoundingClientRect();
+
+    const distance = Math.abs(playerRect.left - enemyRect.left);
+
+    if (distance < 100) {
+
+        enemyHealth -= 10;
+
+        if (enemyHealth < 0) {
+            enemyHealth = 0;
+        }
+
+        enemyHealthBar.style.width = enemyHealth + "%";
+
+        if (enemyHealth === 0) {
+            alert("Round Win!");
+        }
+    }
 });
 let jumping = false;
 

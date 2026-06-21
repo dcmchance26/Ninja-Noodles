@@ -96,10 +96,9 @@ if (!fightActive) return;
     }, 100);
 
     if (enemyHealth <= 0) {
-    enemyHealth = 0;
-}
 
-enemyHealthBar.style.width = enemyHealth + "%";
+    enemyHealth = 0;
+    enemyHealthBar.style.width = enemyHealth + "%";
 
     fightActive = false;
 
@@ -119,8 +118,6 @@ enemyHealthBar.style.width = enemyHealth + "%";
     }, 2000);
 
 }
-
-    }
 
 });
 

@@ -26,7 +26,10 @@ document.getElementById("rightBtn").addEventListener("click", () => {
 
 const enemy = document.getElementById("enemy");
 const enemyHealthBar = document.getElementById("enemyHealth");
+let enemyX = window.innerWidth - 150;
 
+enemy.style.left = enemyX + "px";
+enemy.style.right = "auto";
 let enemyHealth = 100;
 
 document.getElementById("attackBtn").addEventListener("click", () => {

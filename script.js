@@ -88,13 +88,7 @@ setTimeout(() => {
     enemy.style.opacity = "1";
 }, 100);
 
-        if (enemyHealth < 0) {
-            enemyHealth = 0;
-        }
-
-        enemyHealthBar.style.width = enemyHealth + "%";
-
-       if (enemyHealth <= 0) {
+if (enemyHealth <= 0) {
 
     fightActive = false;
 
@@ -104,7 +98,11 @@ setTimeout(() => {
         "PLAYER WINS ROUND " + currentRound;
 
 }
-    });
+
+    }
+
+});
+
 let jumping = false;
 
 document.getElementById("jumpBtn").addEventListener("click", () => {

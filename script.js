@@ -18,8 +18,12 @@ const player = document.getElementById("player");
 let playerX = 30;
 
 startBtn.addEventListener("click", () => {
+
     titleScreen.style.display = "none";
     gameScreen.style.display = "block";
+
+    startRoundIntro();
+
 });
 
 document.getElementById("leftBtn").addEventListener("click", () => {
@@ -119,6 +123,8 @@ if (!fightActive) return;
 });
 setInterval(() => {
 
+    if (!fightActive) return;
+
     if (enemyX > playerX + 60) {
 
         enemyX -= 4;
@@ -204,11 +210,11 @@ function startRoundIntro() {
 
                 fightActive = true;
 
-            }, 1000);
+            }, 2000);
 
-        }, 1000);
+        }, 2000);
 
-    }, 1000);
+    }, 2000);
 
 }
-startRoundIntro();
+

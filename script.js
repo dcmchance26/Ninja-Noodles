@@ -15,13 +15,29 @@ startBtn.addEventListener("click", () => {
 });
 
 document.getElementById("leftBtn").addEventListener("click", () => {
+
     playerX -= 20;
+
+    if (playerX < 0) {
+        playerX = 0;
+    }
+
     player.style.left = playerX + "px";
+
 });
 
 document.getElementById("rightBtn").addEventListener("click", () => {
+
     playerX += 20;
+
+    const maxX = window.innerWidth - 80;
+
+    if (playerX > maxX) {
+        playerX = maxX;
+    }
+
     player.style.left = playerX + "px";
+
 });
 
 const enemy = document.getElementById("enemy");

@@ -49,6 +49,11 @@ let enemyX = window.innerWidth - 150;
 enemy.style.left = enemyX + "px";
 enemy.style.right = "auto";
 let enemyHealth = 100;
+enemy.style.opacity = "0.4";
+
+setTimeout(() => {
+    enemy.style.opacity = "1";
+}, 100);
 
 document.getElementById("attackBtn").addEventListener("click", () => {
 
@@ -118,7 +123,7 @@ setInterval(() => {
 
     const distance = Math.abs(enemyX - playerX);
 
-    if (distance < 90 && enemyCanAttack) {
+    if (distance < 70 && enemyCanAttack) {
 
         enemyCanAttack = false;
 

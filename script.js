@@ -15,7 +15,7 @@ const gameScreen = document.getElementById("gameScreen");
 
 const player = document.getElementById("player");
 
-let playerX = 30;
+let playerX =20;
 
 startBtn.addEventListener("click", () => {
 

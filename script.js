@@ -107,11 +107,11 @@ document.getElementById("jumpBtn").addEventListener("click", () => {
 });
 setInterval(() => {
 
-    if (enemyX > playerX + 80) {
+    if (enemyX > playerX + 70) {
 
         enemyX -= 4;
 
-    } else if (enemyX < playerX - 80) {
+    } else if (enemyX < playerX - 70) {
 
         enemyX += 4;
 
@@ -158,6 +158,7 @@ setInterval(() => {
     gameOver = true;
 
     alert("You Lost!");
+            
 
 }  
 

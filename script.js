@@ -227,11 +227,11 @@ function startRoundIntro() {
 
                 fightActive = true;
 
-            }, 2000);
+            }, 1500);
 
-        }, 2000);
+        }, 1500);
 
-    }, 2000);
+    }, 1500);
 
 }
 

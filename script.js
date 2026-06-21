@@ -69,9 +69,14 @@ document.getElementById("attackBtn").addEventListener("click", () => {
 
     const distance = Math.abs(playerRect.left - enemyRect.left);
 
-    if (distance < 100) {
+    if (distance < 70) {
 
         enemyHealth -= 10;
+        enemy.style.opacity = "0.4";
+
+setTimeout(() => {
+    enemy.style.opacity = "1";
+}, 100);
 
         if (enemyHealth < 0) {
             enemyHealth = 0;

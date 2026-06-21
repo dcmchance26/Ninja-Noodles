@@ -1,4 +1,10 @@
 let gameOver = false;
+let currentRound = 1;
+
+let playerRoundsWon = 0;
+let enemyRoundsWon = 0;
+
+const messageBox = document.getElementById("messageBox");
 const playerHealthBar = document.getElementById("playerHealth");
 
 let playerHealth = 100;

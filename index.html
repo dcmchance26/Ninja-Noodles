@@ -8,20 +8,77 @@
 </head>
 <body>
 
+    <!-- TITLE SCREEN -->
+
     <div id="titleScreen">
 
-<button id="startBtn">
-START GAME
-</button>
+        <button id="startBtn">
+            START GAME
+        </button>
 
-<div id="versionText">
-Alpha 0.3
-</div>
+        <div id="versionText">
+            Alpha 0.4
+        </div>
+
     </div>
+
+    <!-- CHARACTER SELECT -->
+
+    <div id="characterSelectScreen" style="display:none;">
+
+        <h1>CHOOSE YOUR NOODLE</h1>
+
+        <div id="characterCard">
+
+            <img id="characterImage"
+                 src="images/ramen.png"
+                 alt="Noodle Fighter">
+
+            <h2 id="characterName">
+                RAMEN
+            </h2>
+
+            <div class="statLine">
+                Health:
+                <span id="healthStat">100</span>
+            </div>
+
+            <div class="statLine">
+                Damage:
+                <span id="damageStat">10</span>
+            </div>
+
+            <div class="statLine">
+                Speed:
+                <span id="speedStat">4</span>
+            </div>
+
+        </div>
+
+        <div id="characterButtons">
+
+            <button id="prevCharacterBtn">
+                ◀
+            </button>
+
+            <button id="nextCharacterBtn">
+                ▶
+            </button>
+
+        </div>
+
+        <button id="selectCharacterBtn">
+            SELECT FIGHTER
+        </button>
+
+    </div>
+
+    <!-- GAME SCREEN -->
 
     <div id="gameScreen" style="display:none;">
 
         <div id="hud">
+
             <div class="health-container">
                 <div id="playerHealth" class="health-bar"></div>
             </div>
@@ -29,30 +86,60 @@ Alpha 0.3
             <div class="health-container">
                 <div id="enemyHealth" class="health-bar enemy"></div>
             </div>
+
         </div>
 
         <div id="arena">
 
-    <div id="messageBox">ROUND 1</div>
+            <div id="messageBox"></div>
 
-    <div id="player" class="fighter"></div>
-    <div id="enemy" class="fighter enemyFighter"></div>
+            <div id="player" class="fighter"></div>
 
-</div>
+            <div id="enemy" class="fighter enemyFighter"></div>
+
+        </div>
 
         <div id="controls">
 
             <div class="leftControls">
-                <button id="leftBtn">◀</button>
-                <button id="rightBtn">▶</button>
+
+                <button id="leftBtn">
+                    ◀
+                </button>
+
+                <button id="rightBtn">
+                    ▶
+                </button>
+
             </div>
 
             <div class="rightControls">
-                <button id="jumpBtn">▲</button>
-                <button id="attackBtn">👊</button>
+
+                <button id="jumpBtn">
+                    ▲
+                </button>
+
+                <button id="attackBtn">
+                    👊
+                </button>
+
             </div>
 
         </div>
+
+    </div>
+
+    <!-- MATCH WINNER SCREEN -->
+
+    <div id="matchWinnerScreen" style="display:none;">
+
+        <h1>
+            MATCH WINNER
+        </h1>
+
+        <h2 id="winnerName">
+            RAMEN
+        </h2>
 
     </div>
 

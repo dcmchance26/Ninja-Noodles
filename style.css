@@ -11,8 +11,22 @@ body{
 }
 
 #titleScreen{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding-top:100px;
+
+    background:
+    linear-gradient(
+        to bottom,
+        #111,
+        #1a1a1a,
+        #111
+    );
+
+    color:white;
 }
 
 #startBtn{
@@ -93,4 +107,71 @@ button{
     font-weight:bold;
     z-index:100;
     text-align:center;
+}
+#gameTitle{
+
+    font-size:64px;
+    font-weight:bold;
+
+    background:linear-gradient(
+        to bottom,
+        #ffd700,
+        #ffae00
+    );
+
+    -webkit-background-clip:text;
+    color:transparent;
+
+    margin-bottom:10px;
+
+    text-shadow:
+    0 0 10px rgba(255,215,0,.5);
+}
+
+#japaneseTitle{
+
+    font-size:24px;
+
+    color:#ddd;
+
+    letter-spacing:4px;
+
+    margin-bottom:25px;
+}
+
+#tagline{
+
+    font-size:20px;
+
+    margin-bottom:35px;
+
+    color:#bbb;
+}
+
+#startBtn{
+
+    width:220px;
+
+    height:70px;
+
+    font-size:26px;
+
+    font-weight:bold;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#ffae00;
+
+    color:black;
+}
+
+#versionText{
+
+    margin-top:25px;
+
+    color:#777;
+
+    font-size:14px;
 }
